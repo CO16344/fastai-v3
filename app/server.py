@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.googleapis.com/drive/v3/files/1QXbKGM596yB9Zl-yFt68D2tsOPtiupNm?alt=media&key=AIzaSyAJpz69zhTPVUMtAUS1QTPxkELDGdVSxLM'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1JmiFweJKSh9GxjEg3Mbt1gGhuLC8VLEJ?alt=media&key=AIzaSyDTpfUwXzzNeaVUT5ecDbFP5s8jRd3boUM'
 export_file_name = 'export.pkl'
 
 classes = ['Atelectasis', 'Infilteration','Mass','Pneumothporax','Nodule', 'Emphysema', 'Pleural_thickening', 
