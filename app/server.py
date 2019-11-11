@@ -12,8 +12,21 @@ from starlette.staticfiles import StaticFiles
 export_file_url = 'https://www.googleapis.com/drive/v3/files/1JmiFweJKSh9GxjEg3Mbt1gGhuLC8VLEJ?alt=media&key=AIzaSyDTpfUwXzzNeaVUT5ecDbFP5s8jRd3boUM'
 export_file_name = 'export.pkl'
 
-classes = ['Atelectasis', 'Infilteration','Mass','Pneumothporax','Nodule', 'Emphysema', 'Pleural_thickening', 
-'Effusion','Consolidation','Pneumonial', 'Hernia','Cardiomegaly', 'Fibrosis', 'Effusion','Edema','No Finding']
+classes = ['Atelectasis',
+ 'Cardiomegaly',
+ 'Consolidation',
+ 'Edema',
+ 'Effusion',
+ 'Emphysema',
+ 'Fibrosis',
+ 'Hernia',
+ 'Infiltration',
+ 'Mass',
+ 'No Finding',
+ 'Nodule',
+ 'Pleural_Thickening',
+ 'Pneumonia',
+ 'Pneumothorax']
 
 path = Path(__file__).parent
 
