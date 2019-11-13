@@ -9,8 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.googleapis.com/drive/v3/files/1JmiFweJKSh9GxjEg3Mbt1gGhuLC8VLEJ?alt=media&key=AIzaSyDTpfUwXzzNeaVUT5ecDbFP5s8jRd3boUM'
-export_file_name = 'export.pkl'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1--6bPSTJxbJtmpNAaELFahBSnPe819Mg?alt=media&key=AIzaSyBqr4L5ZtkhpgCjdfHnl2Yjool40xvkA08'
+export_file_name = 'stage-3-rn34.pth'
 
 classes = ['Atelectasis',
  'Cardiomegaly',
