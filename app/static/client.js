@@ -7,7 +7,7 @@ function showPicker() {
 function showPicked(input) {
   el("upload-label").innerHTML = input.files[0].name;
   var reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = function(e) {  
     el("image-picked").src = e.target.result;
     el("image-picked").className = "";
   };
@@ -32,7 +32,10 @@ function analyze() {
       el("result-label").innerHTML = `Result = ${response["result"]}`;
       
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
-      document.getElementById('a').innerHTML = 'yes';
+      if (parseFloat(${response["Atelectasis"]) > 0.2000000000)
+      {document.getElementById('a').innerHTML = 'yes';}
+      else
+      { document.getElementById('a').innerHTML = 'no'; }
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
