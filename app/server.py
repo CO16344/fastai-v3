@@ -75,8 +75,11 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    prediction = learn.predict(img)
-    return JSONResponse({'result': str(prediction)})
+   # prediction = learn.predict(img)
+    preds, _ = learn.get_preds(ds_type=DatasetType.Test)
+    thresh=0.1
+    labelled_preds = [' '.join([learn.data.classes[i] for i,p in enumerate(pred) if p > thresh]) for pred in preds]
+    return JSONResponse({'result': str(labelled_preds)})
 
 
 if __name__ == '__main__':
