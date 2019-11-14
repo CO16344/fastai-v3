@@ -32,10 +32,7 @@ function analyze() {
       el("result-label").innerHTML = `Result = ${response["result"]}`;
       
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
-      if (parseFloat(${response["Atelectasis"]) > 0.2000000000)
-      {document.getElementById('a').innerHTML = 'yes';}
-      else
-      { document.getElementById('a').innerHTML = 'no'; }
+      var abc = ${response["Atelectasis"];
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
