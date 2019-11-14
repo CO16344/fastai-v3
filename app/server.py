@@ -80,7 +80,7 @@ async def analyze(request):
     preds = learn.predict(img)
     resultf=[]
     for i in result[2].numpy().tolist():
-	resultf.append(i)
+        resultf.append(i)
     return JSONResponse({'result': 'true','Atelectasis' : resultf[0],'Cardiomegaly': resultf[1],'Consolidation': resultf[2],'Edema': resultf[3],'Effusion': resultf[4],'Emphysema': resultf[5],'Fibrosis': resultf[6],'Hernia': resultf[7],'Infiltration': resultf[8],'Mass','No Finding': resultf[9],'Nodule': resultf[10],'Pleural_Thickening': resultf[11],'Pneumonia': resultf[12],'Pneumothorax': resultf[13]}) 
  
 
