@@ -75,11 +75,20 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
-   # prediction = learn.predict(img)
-    preds, _ = learn.get_preds(ds_type=DatasetType.Test)
-    thresh=0.1
-    labelled_preds = [' '.join([learn.data.classes[i] for i,p in enumerate(pred) if p > thresh]) for pred in preds]
-    return JSONResponse({'result': str(labelled_preds)})
+    preds = learn.predict(img)
+    results = imagenet_utils.decode_predictions(preds)
+    data["predictions"] = []
+
+            # loop over the results and add them to the list of
+            # returned predictions
+    for (imagenetID, label, prob) in results[0]:
+    
+         r = {"label": label, "probability": float(prob)}
+         data["predictions"].append(r)
+
+            # indicate that the request was a success
+    data["success"] = True
+    return JSONResponse({'result': str(data)})
 
 
 if __name__ == '__main__':
