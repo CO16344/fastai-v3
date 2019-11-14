@@ -29,8 +29,6 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = ` ${response["result"]}`;
-      
       el("atelectasis").innerHTML = ` ${response["Atelectasis"]}`;
       var at = parseFloat(response["Atelectasis"])
       if( at > 0.200000000)
