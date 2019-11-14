@@ -33,7 +33,7 @@ function analyze() {
       
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
       var s = ${response["Atelectasis"]};
-      if (typeof x === String) { el("0").innerHTML = `YES`;}
+      if (typeof x === 'String') { el("0").innerHTML = `YES`;}
       else { el("0").innerHTML = `no`;}
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
