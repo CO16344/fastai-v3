@@ -30,6 +30,21 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
+      el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
+      el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
+      el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
+      el("edema").innerHTML = `Result = ${response["Edema"]}`;
+      el("effusion").innerHTML = `Result = ${response["Effusion"]}`;
+      el("emphysema").innerHTML = `Result = ${response["Emphysema"]}`;
+      el("fibrosis").innerHTML = `Result = ${response["Fibrosis"]}`;
+      el("hernia").innerHTML = `Result = ${response["Hernia"]}`;
+      el("infiltration").innerHTML = `Result = ${response["Infiltration"]}`;
+      el("mass").innerHTML = `Result = ${response["Mass"]}`;
+      el("no_Finding").innerHTML = `Result = ${response["No Finding"]}`;
+      el("nodule").innerHTML = `Result = ${response["Nodule"]}`;
+      el("pleural_Thickening").innerHTML = `Result = ${response["Pleural_Thickening"]}`;
+      el("pneumonia").innerHTML = `Result = ${response["Pneumonia"]}`;
+      el("pneumothorax").innerHTML = `Result = ${response["Pneumothorax"]}`;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
