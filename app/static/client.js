@@ -29,7 +29,8 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("atelectasis").innerHTML = ` ${response["Atelectasis"]}`;
+      
+      el("atelectasis").innerHTML = ` ${response["Atelectasis"].toFixed(2)}`;
       var at = parseFloat(response["Atelectasis"])
       if( at > 0.200000000)
       {  document.getElementById('a').innerHTML = 'YES';}
@@ -98,13 +99,6 @@ function analyze() {
       {  document.getElementById('j').innerHTML = 'YES';}
       else
       {  document.getElementById('j').innerHTML = 'NO';}
-
-      el("no_Finding").innerHTML = ` ${response["No Finding"]}`;
-      at = parseFloat(response["No Finding"])
-      if( at > 0.200000000)
-      {  document.getElementById('k').innerHTML = 'YES';}
-      else
-      {  document.getElementById('k').innerHTML = 'NO';}
 
       el("nodule").innerHTML = ` ${response["Nodule"]}`;
       at = parseFloat(response["Nodule"])
