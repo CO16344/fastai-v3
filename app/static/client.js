@@ -29,10 +29,10 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = `Result = ${response["result"]}`;
+      el("result-label").innerHTML = `${response["result"]}`;
       
-      el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
-      var abc = ${response["Atelectasis"];
+      el("atelectasis").innerHTML = `${response["Atelectasis"]}`;
+      var at = response["Atelectasis"]
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
