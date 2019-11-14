@@ -33,6 +33,11 @@ function analyze() {
       
       el("atelectasis").innerHTML = `${response["Atelectasis"]}`;
       var at = parseFloat(response["Atelectasis"])
+      
+      if( at > 0.200000000)
+      {  document.getElementById('a').innerHTML = 'Yes';}
+      else
+      {  document.getElementById('a').innerHTML = 'NO';}
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
