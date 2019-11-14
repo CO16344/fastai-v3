@@ -32,8 +32,7 @@ function analyze() {
       el("result-label").innerHTML = `Result = ${response["result"]}`;
       
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
-      var a1 = ${response["Atelectasis"];
-      el("0").innerHTML = `hi`;
+      el("a").innerHTML = `hi`;
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
