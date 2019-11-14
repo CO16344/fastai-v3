@@ -32,9 +32,8 @@ function analyze() {
       el("result-label").innerHTML = `Result = ${response["result"]}`;
       
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
-      var s = ${response["Atelectasis"]};
-      if (typeof x === 'String') { el("0").innerHTML = `YES`;}
-      else { el("0").innerHTML = `no`;}
+      var a1 = ${response["Atelectasis"];
+      el("0").innerHTML = `hi`;
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
