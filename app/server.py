@@ -81,7 +81,7 @@ async def analyze(request):
     resultf=[]
     for i in result[2].numpy().tolist():
         resultf.append(i)
-    return JSONResponse({'result': 'true','Atelectasis' : resultf[0],'Cardiomegaly': resultf[1],'Consolidation': resultf[2],'Edema': resultf[3],'Effusion': resultf[4],'Emphysema': resultf[5],'Fibrosis': resultf[6],'Hernia': resultf[7],'Infiltration': resultf[8],'Mass','No Finding': resultf[9],'Nodule': resultf[10],'Pleural_Thickening': resultf[11],'Pneumonia': resultf[12],'Pneumothorax': resultf[13]})
+    return JSONResponse({'result':'true', 'Atelectasis': resultf[0], 'Cardiomegaly': resultf[1], 'Consolidation': resultf[2], 'Edema': resultf[3], 'Effusion': resultf[4], 'Emphysema': resultf[5], 'Fibrosis': resultf[6], 'Hernia': resultf[7], 'Infiltration': resultf[8], 'Mass': resultf[9],'No Finding': resultf[10],'Nodule': resultf[11],'Pleural_Thickening': resultf[12],'Pneumonia': resultf[13],'Pneumothorax': resultf[14]})
 
 
 if __name__ == '__main__':
