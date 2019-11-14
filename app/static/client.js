@@ -31,6 +31,8 @@ function analyze() {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
+      if(parseFloat(${response["Atelectasis"]}) >= 0.2) { el("0").innerHTML = `YES`;}
+      else {  el("0").innerHTML = `YES`; }
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
