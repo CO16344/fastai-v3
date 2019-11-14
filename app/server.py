@@ -8,6 +8,8 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+import numpy as np
+
 
 export_file_url = 'https://www.googleapis.com/drive/v3/files/1NH6HeImWZSxisx_3C6ldbkhkzxRqCVX5?alt=media&key=AIzaSyBqr4L5ZtkhpgCjdfHnl2Yjool40xvkA08'
 export_file_name = 'export1.pkl'
@@ -76,19 +78,14 @@ async def analyze(request):
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
     preds = learn.predict(img)
-    results = imagenet_utils.decode_predictions(preds)
-    data["predictions"] = []
-
-            # loop over the results and add them to the list of
-            # returned predictions
-    for (imagenetID, label, prob) in results[0]:
-    
-         r = {"label": label, "probability": float(prob)}
-         data["predictions"].append(r)
-
-            # indicate that the request was a success
-    data["success"] = True
-    return JSONResponse({'result': str(data)})
+    resultf=[]
+    for i in result[2].numpy().tolist():
+		      resultf.append(i)
+    return JSONResponse({'result': 'true','Atelectasis' : resultf[0],'Cardiomegaly': resultf[1],'Consolidation': resultf[2],'Edema': resultf[3],'Effusion': resultf[4],
+                        'Emphysema': resultf[5],
+                        'Fibrosis': resultf[6],'Hernia': resultf[7],'Infiltration': resultf[8],'Mass','No Finding': resultf[9],'Nodule': resultf[10],'Pleural_Thickening': resultf[11],
+                        'Pneumonia': resultf[12],'Pneumothorax': resultf[13]}) 
+ 
 
 
 if __name__ == '__main__':
