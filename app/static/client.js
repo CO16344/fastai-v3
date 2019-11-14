@@ -30,7 +30,10 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
+      
       el("atelectasis").innerHTML = `Result = ${response["Atelectasis"]}`;
+      var x = ${response["Atelectasis"]};
+      el("0").innerHTML = `typeof x`;
       el("cardiomegaly").innerHTML = `Result = ${response["Cardiomegaly"]}`;
       el("consolidation").innerHTML = `Result = ${response["Consolidation"]}`;
       el("edema").innerHTML = `Result = ${response["Edema"]}`;
