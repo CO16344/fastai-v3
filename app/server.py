@@ -77,7 +77,7 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    preds = learn.predict(img)
+    result = learn.predict(img)
     resultf=[]
     for i in result[2].numpy().tolist():
         resultf.append(i)
