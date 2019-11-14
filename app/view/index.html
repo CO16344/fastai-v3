@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <link rel='stylesheet' href='../static/style.css'>
+  <link rel='stylesheet' href='../static/newcss.css'>
   <script src='../static/client.js'></script>
 </head>
 <body>
@@ -16,8 +16,8 @@
 
 
   <div class="column middle" style="background-color:#efed;">
-  	<div class='content'>
-    <div class='no-display'>
+  	<br><br><br><br><br>
+  	 <div class='no-display'>
         <input id='file-input'
                class='no-display'
                type='file'
@@ -27,7 +27,7 @@
       </div>
       <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
       <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
+        <label id='upload-label' >No file chosen</label>
       </div>
       <div>
         <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
@@ -35,12 +35,12 @@
       <div class='analyze'>
         <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
       </div>
-  </div></div>
+  </div>
 
 
 
   <div class="column right" style="background-color:#eeee;">
-    <h2>Column 3</h2>
+    <h2 style="text-align: center;">Prediction</h2>
     <table>
         <tr>
         <th>Label</th>
@@ -57,7 +57,6 @@
       <tr><td>Hernia</td><td><label id='hernia'>-</label></td><td><label id='h'>-</label></td></tr>
       <tr><td>Infiltration</td><td><label id='infiltration'>-</label></td><td><label id='i'>-</label></td></tr>
       <tr><td>Mass</td><td><label id='mass'>-</label></td><td><label id='j'>-</label></td></tr>
-      <tr><td>No Finding</td><td><label id='no_Finding'>-</label></td><td><label id='k'>-</label></td></tr>
       <tr><td>Nodule</td><td><label id='nodule'>-</label></td><td><label id='l'>-</label></td></tr>
       <tr><td>Pleural_Thickening</td><td><label id='pleural_Thickening'>-</label></td><td><label id='m'>-</label></td></tr>
       <tr><td>Pneumonia</td><td><label id='pneumonia'>-</label></td><td><label id='n'>-</label></td></tr>
